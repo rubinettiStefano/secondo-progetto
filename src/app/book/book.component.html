@@ -5,7 +5,7 @@
         <mat-card-subtitle>{{content.author}}</mat-card-subtitle>
         <img mat-card-lg-image [src]="content.imgUrl" >
       </mat-card-title-group>
-      <button mat-icon-button >
+      <button mat-icon-button (click)="delete()">
         <mat-icon>delete</mat-icon>
       </button>
     </mat-card-header>

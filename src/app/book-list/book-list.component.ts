@@ -20,4 +20,9 @@ export class BookListComponent
   }
 
   books:Book[];
+
+  deleteBook(id:number)
+  {
+    this.bookService.deleteById(id);
+  }
 }

@@ -147,4 +147,9 @@ export class BookService
   {
     return this.books;
   }
+
+  deleteById(id:number):void
+  {
+    this.books.splice(this.books.findIndex(b=>b.id==id),1);
+  }
 }
