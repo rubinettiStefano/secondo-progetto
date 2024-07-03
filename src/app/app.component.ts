@@ -6,13 +6,14 @@ import { BookFormComponent } from "./book-form/book-form.component";
 import { FilmListComponent } from './film-list/film-list.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { HomepageComponent } from "./homepage/homepage.component";
+import { NavbarComponent } from "./navbar/navbar.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [MatGridListModule, RouterOutlet, BookComponent, BookListComponent, BookFormComponent, FilmListComponent, HomepageComponent]
+    imports: [MatGridListModule, RouterOutlet, BookComponent, BookListComponent, BookFormComponent, FilmListComponent, HomepageComponent, NavbarComponent]
 })
 export class AppComponent {
   title = 'secondo-progetto';

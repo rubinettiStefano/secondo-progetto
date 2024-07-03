@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FilmService } from '../services/film.service';
 import { Film } from '../model/Film';
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { FilmComponent } from "../film/film.component";
 import { MatGridList, MatGridListModule } from '@angular/material/grid-list';
 import { MatInput, MatInputModule } from '@angular/material/input';
@@ -19,7 +19,7 @@ import { FilmFormComponent } from "../film-form/film-form.component";
 })
 export class FilmListComponent 
 {
-  constructor(private filmService:FilmService)
+  constructor(private filmService:FilmService, private location:Location)
   {
     this.filmsToShow = filmService.getAll();
   }
@@ -34,6 +34,10 @@ export class FilmListComponent
     this.filter();
   }
 
+  goBack():void
+  {
+    this.location.back();
+  }
   filter():void
   {
     this.filmsToShow = this.filmService.getFiltered(this.filterCriteria);
