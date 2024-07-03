@@ -32,7 +32,7 @@ export class BookService
             title: "1984",
             publisher: "Secker & Warburg",
             price: 12.99,
-            imgUrl: "https://images-na.ssl-images-amazon.com/images/I/71kxa1-0AfL.jpg"
+            imgUrl: "https://www.theoriginalunderground.com/cdn/shop/products/1984-george-orwell-cover-print-179850_1024x.jpg?v=1656593374"
         },
         {
             id: 4,
@@ -41,7 +41,7 @@ export class BookService
             title: "To Kill a Mockingbird",
             publisher: "J.B. Lippincott & Co.",
             price: 10.99,
-            imgUrl: "https://images-na.ssl-images-amazon.com/images/I/81Otwki3a7L.jpg"
+            imgUrl: "https://m.media-amazon.com/images/I/81aY1lxk+9L._AC_UF1000,1000_QL80_.jpg"
         },
         {
             id: 5,
@@ -50,7 +50,7 @@ export class BookService
             title: "The Great Gatsby",
             publisher: "Charles Scribner's Sons",
             price: 14.99,
-            imgUrl: "https://images-na.ssl-images-amazon.com/images/I/71VZ4yHpjDL.jpg"
+            imgUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg/423px-The_Great_Gatsby_Cover_1925_Retouched.jpg"
         },
         {
             id: 6,
@@ -68,7 +68,7 @@ export class BookService
             title: "Frankenstein",
             publisher: "Lackington, Hughes, Harding, Mavor & Jones",
             price: 9.99,
-            imgUrl: "https://images-na.ssl-images-amazon.com/images/I/71z4b5x0ADL.jpg"
+            imgUrl: "https://interactive.wttw.com/sites/default/files/frankenstein@2x.jpg"
         },
         {
             id: 8,
@@ -77,7 +77,7 @@ export class BookService
             title: "One Hundred Years of Solitude",
             publisher: "Harper & Row",
             price: 13.99,
-            imgUrl: "https://images-na.ssl-images-amazon.com/images/I/91LrHlb8ySL.jpg"
+            imgUrl: "https://pictures.abebooks.com/inventory/30831605379.jpg"
         },
         {
             id: 9,
@@ -86,7 +86,7 @@ export class BookService
             title: "Moby-Dick",
             publisher: "Richard Bentley",
             price: 16.99,
-            imgUrl: "https://images-na.ssl-images-amazon.com/images/I/81MZFxXQHTL.jpg"
+            imgUrl: "https://m.media-amazon.com/images/I/71d5wo+-MuL._AC_UF1000,1000_QL80_.jpg"
         },
         {
             id: 10,
@@ -95,7 +95,7 @@ export class BookService
             title: "War and Peace",
             publisher: "The Russian Messenger",
             price: 19.99,
-            imgUrl: "https://images-na.ssl-images-amazon.com/images/I/91H0ATD5fPL.jpg"
+            imgUrl: "https://m.media-amazon.com/images/I/51lLr8b16DL.jpg"
         },
         {
             id: 11,
@@ -104,7 +104,7 @@ export class BookService
             title: "Great Expectations",
             publisher: "Chapman & Hall",
             price: 14.99,
-            imgUrl: "https://images-na.ssl-images-amazon.com/images/I/81r4JOf7BPL.jpg"
+            imgUrl: "https://m.media-amazon.com/images/I/51evTcoKMGL.jpg"
         },
         {
             id: 12,
@@ -122,7 +122,7 @@ export class BookService
             title: "The Iliad",
             publisher: "Ancient Greece",
             price: 18.99,
-            imgUrl: "https://images-na.ssl-images-amazon.com/images/I/71tBalKTpQL.jpg"
+            imgUrl: "https://m.media-amazon.com/images/I/71FVVdj9w4L._AC_UF1000,1000_QL80_.jpg"
         },
         {
             id: 14,
@@ -131,7 +131,7 @@ export class BookService
             title: "Crime and Punishment",
             publisher: "The Russian Messenger",
             price: 17.99,
-            imgUrl: "https://images-na.ssl-images-amazon.com/images/I/81-76q2FziL.jpg"
+            imgUrl: "https://m.media-amazon.com/images/I/71O2XIytdqL._AC_UF1000,1000_QL80_.jpg"
         },
         {
             id: 15,
@@ -140,7 +140,7 @@ export class BookService
             title: "The Catcher in the Rye",
             publisher: "Little, Brown and Company",
             price: 10.99,
-            imgUrl: "https://images-na.ssl-images-amazon.com/images/I/71hxPLvDO0L.jpg"
+            imgUrl: "https://m.media-amazon.com/images/I/8125BDk3l9L._AC_UF1000,1000_QL80_.jpg"
         }
     ];
   getAll():Book[]
