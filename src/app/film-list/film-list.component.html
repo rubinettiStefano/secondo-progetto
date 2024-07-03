@@ -1,0 +1,15 @@
+<app-film-form (saveEvent)="saveFilm($event)"></app-film-form>
+<div style="background-color: black; width: 20%; height: 15%; margin-left: 40%; border-radius: 10px; margin-top: 80px;">
+    <mat-form-field class="filterInput" style="margin-left: 17%;margin-right: 17%;">
+        <mat-label>Filtra</mat-label>
+        <input  (input)="filter()" matInput placeholder="Inserisci titolo o autore" [(ngModel)]="filterCriteria"  >
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="clearFilter()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+</div>
+    <mat-grid-list cols="3" rowHeight="50vh">
+        <mat-grid-tile *ngFor="let film of filmsToShow" >
+            <app-film [content]="film" (deleteEvent)="deleteFilm($event)"></app-film>
+        </mat-grid-tile>
+    </mat-grid-list>

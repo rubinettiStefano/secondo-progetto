@@ -1,0 +1,113 @@
+<mat-expansion-panel style=" width: 30%; margin-right: 35%;margin-left: 35%;">
+    <mat-expansion-panel-header style="background-color: white; width: 100%;">
+      <mat-panel-title> New Film Form </mat-panel-title>
+      <mat-panel-description> Open Me to insert a new film </mat-panel-description>
+    </mat-expansion-panel-header>
+    <form class="example-form"  #form="ngForm" (ngSubmit)="saveFilm()">
+      <mat-form-field>
+        <mat-label>Author</mat-label>
+        <input 
+          matInput
+          id="director"
+          name="director"
+          type="text"
+          [(ngModel)]="film.director"
+          #director="ngModel"
+          required
+        >
+        @if (director.invalid) 
+        {
+          <mat-error>Please enter an director</mat-error>
+        }
+        <!-- let director = document.getElementById("director")-->
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input 
+          matInput
+          id="title"
+          name="title"
+          type="text"
+          [(ngModel)]="film.title"
+          #title="ngModel"
+          required
+        >
+        @if (title.invalid) 
+        {
+          <mat-error>Please enter a title</mat-error>
+        }
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Publisher</mat-label>
+        <input 
+          matInput
+          id="publisher"
+          name="publisher"
+          type="text"
+          [(ngModel)]="film.publisher"
+          #publisher="ngModel"
+          required
+        >
+        @if (publisher.invalid) 
+        {
+          <mat-error>Please enter a publisher</mat-error>
+        }
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Date</mat-label>
+        <input 
+          matInput
+          id="release_date"
+          name="release_date"
+          type="date"
+          [(ngModel)]="film.release_date"
+          #release_date="ngModel"
+          required
+        >
+        @if (release_date.invalid)
+        {
+          <mat-error>Please a past date</mat-error>
+        }
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Price</mat-label>
+        <input 
+          matInput
+          id="duration"
+          name="duration"
+          type="number"
+          [(ngModel)]="film.duration"
+          #duration="ngModel"
+          required
+          min="0"
+          max="1000"
+        >
+        @if (duration.invalid)
+        {
+          <mat-error>Please a valid duration</mat-error>
+        }
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Cover Url</mat-label>
+        <input 
+          matInput
+          id="imgUrl"
+          name="imgUrl"
+          type="text"
+          [(ngModel)]="film.imgUrl"
+          #imgUrl="ngModel"
+          required
+          pattern="^http.*\.(jpg|jpeg|png)$"
+        >
+        @if (imgUrl.invalid)
+        {
+          <mat-error>Please a valid img url</mat-error>
+        }
+      </mat-form-field>
+    
+      <button mat-fab extended type="submit" [disabled]="form.invalid">
+        <mat-icon>save</mat-icon>
+        Save
+      </button>
+    </form>
+  </mat-expansion-panel>
