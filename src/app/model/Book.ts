@@ -6,4 +6,5 @@ export interface Book
     title:string;
     publisher:string;
     price:number;
+    imgUrl:string;
 }
