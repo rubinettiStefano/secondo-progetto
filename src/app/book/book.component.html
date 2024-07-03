@@ -8,7 +8,7 @@
     </mat-card-header>
     <mat-card-content>
       <p>Published By: {{content.publisher}}</p>
-      <p>Release Date: {{content.release_date}}</p>
+      <p>Release Date: {{content.release_date | date:"dd/MM/YYYY"}}</p>
       <p>Price: {{content.price}} &euro;</p>
     </mat-card-content>
   </mat-card>
