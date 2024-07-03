@@ -148,6 +148,11 @@ export class BookService
     return this.books;
   }
 
+  getFiltered(criteria:string):Book[]
+  {
+    return this.getAll().filter(b=> (b.author+" "+b.title).includes(criteria));
+  }
+  
   deleteById(id:number):void
   {
     this.books.splice(this.books.findIndex(b=>b.id==id),1);

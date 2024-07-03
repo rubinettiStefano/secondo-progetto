@@ -4,25 +4,43 @@ import { Book } from '../model/Book';
 import { CommonModule } from '@angular/common';
 import { BookComponent } from "../book/book.component";
 import { MatGridList, MatGridListModule } from '@angular/material/grid-list';
+import { MatInput, MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
     selector: 'app-book-list',
     standalone: true,
     templateUrl: './book-list.component.html',
     styleUrl: './book-list.component.css',
-    imports: [CommonModule, BookComponent,MatGridListModule]
+    imports: [CommonModule, BookComponent,MatGridListModule,FormsModule,MatIconModule,MatInputModule,MatButtonModule]
 })
 export class BookListComponent 
 {
   constructor(private bookService:BookService)
   {
-    this.books = bookService.getAll();
+    this.booksToShow = bookService.getAll();
   }
 
-  books:Book[];
+  booksToShow:Book[];
+  filterCriteria:string="";//ciò che mettiamo qui deve essere contenuto
+  //nel titolo o nell'autore del libro perche un determinato libro sia mostrato
 
-  deleteBook(id:number)
+  deleteBook(id:number):void
   {
     this.bookService.deleteById(id);
+    this.filter();
+  }
+
+  filter():void
+  {
+    this.booksToShow = this.bookService.getFiltered(this.filterCriteria);
+  }
+
+  clearFilter():void
+  {
+    this.booksToShow = this.bookService.getAll();
+    this.filterCriteria = "";
   }
 }
