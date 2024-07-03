@@ -1,3 +1,4 @@
+<app-book-form (saveEvent)="saveBook($event)"></app-book-form>
 <mat-form-field class="filterInput">
     <mat-label>Filtra</mat-label>
     <input  (input)="filter()" matInput placeholder="Inserisci titolo o autore" [(ngModel)]="filterCriteria"  >

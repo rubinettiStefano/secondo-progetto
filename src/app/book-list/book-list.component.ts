@@ -8,13 +8,14 @@ import { MatInput, MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { BookFormComponent } from "../book-form/book-form.component";
 
 @Component({
     selector: 'app-book-list',
     standalone: true,
     templateUrl: './book-list.component.html',
     styleUrl: './book-list.component.css',
-    imports: [CommonModule, BookComponent,MatGridListModule,FormsModule,MatIconModule,MatInputModule,MatButtonModule]
+    imports: [CommonModule, BookComponent, MatGridListModule, FormsModule, MatIconModule, MatInputModule, MatButtonModule, BookFormComponent]
 })
 export class BookListComponent 
 {
@@ -42,5 +43,9 @@ export class BookListComponent
   {
     this.booksToShow = this.bookService.getAll();
     this.filterCriteria = "";
+  }
+  saveBook(bookToSave:Book):void
+  {
+    this.booksToShow = this.bookService.save(bookToSave);
   }
 }

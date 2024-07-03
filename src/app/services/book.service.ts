@@ -6,6 +6,8 @@ import { Book } from '../model/Book';
 })
 export class BookService 
 {
+
+    maxId:number=15;
     books: Book[] = [
         {
             id: 1,
@@ -156,5 +158,13 @@ export class BookService
   deleteById(id:number):void
   {
     this.books.splice(this.books.findIndex(b=>b.id==id),1);
+  }
+
+  save(book:Book):Book[] //riceve un libro, lo salva, restituisce la lista di tutti i libri
+  {
+    this.maxId++;
+    book.id=this.maxId;
+    this.books.push(book);
+    return this.books;
   }
 }
