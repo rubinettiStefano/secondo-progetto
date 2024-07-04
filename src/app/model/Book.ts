@@ -7,4 +7,5 @@ export interface Book
     release_date:Date;
     price:number;
     imgUrl:string;
+    description:string;
 }

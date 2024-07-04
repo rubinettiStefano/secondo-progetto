@@ -1,0 +1,9 @@
+.sticky-navbar {
+    position: -webkit-sticky; /* Per supporto Safari */
+    position: fixed;
+    top: 0;
+    width: 100%; /* Assicurati che la navbar occupi tutta la larghezza */
+    z-index: 1000; /* Assicurati che la navbar sia sopra altri elementi */
+    background-color: white; /* Colore di sfondo per evitare trasparenze */
+    border-bottom: 1px solid #ccc; /* Aggiungi una linea di fondo per la separazione visiva */
+  }

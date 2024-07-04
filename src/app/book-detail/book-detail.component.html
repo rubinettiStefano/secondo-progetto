@@ -1,4 +1,5 @@
-<form class="example-form"  #form="ngForm" >
+<div class="contenitore">
+  <form class="example-form"  #form="ngForm" >
     <mat-form-field>
       <mat-label>Author</mat-label>
       <input 
@@ -82,7 +83,7 @@
         <mat-error>Please a valid price</mat-error>
       }
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field class="immagine" >
       <mat-label>Cover Url</mat-label>
       <input 
         matInput
@@ -94,14 +95,53 @@
         required
         pattern="^http.*\.(jpg|jpeg|png)$"
       >
+      <img [src]="book.imgUrl" matSuffix (click)="toggleModal()"/>
       @if (imgUrl.invalid)
       {
         <mat-error>Please a valid img url</mat-error>
       }
+      
     </mat-form-field>
-  
-    <button mat-fab extended type="submit" [disabled]="form.invalid">
-      <mat-icon>save</mat-icon>
-      Save
-    </button>
+ 
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea 
+        matInput
+        id="description"
+        name="description"
+        [(ngModel)]="book.description"
+      ></textarea>
+    </mat-form-field>
+    <div class="contenitore-bottoni">
+        <div class="column"></div>
+        <div class="column">
+          <button id="modifica"  mat-fab extended type="submit" [disabled]="form.invalid" (click)="update()">
+            <mat-icon>save</mat-icon>
+            Modifica
+          </button>
+        </div>
+        <div class="column">
+         
+        </div>
+        <div class="column"> <button mat-fab extended (click)="reset(form)" [disabled]="form.untouched">
+          <mat-icon>undo</mat-icon>
+            Reset
+        </button></div>
+        <div class="column"></div>
+        <div class="column">
+          <button id="delete" mat-fab extended (click)="delete()">
+            <mat-icon>delete</mat-icon>
+            Cancella
+          </button>
+        </div>
+        <div class="column"></div>
+  </div>
   </form>
+</div>
+
+
+<div id="myModal" class="modal" [style.display]="displayModal" (click)="toggleModal($event)">
+  <div class="modal-content">
+    <img [src]="book.imgUrl"/>
+  </div>
+</div>

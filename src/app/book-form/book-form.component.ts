@@ -18,13 +18,13 @@ import { MatExpansionModule } from '@angular/material/expansion';
 })
 export class BookFormComponent 
 {
-  book:Book={id:0,author:"",release_date:new Date(),title:"",price:0,imgUrl:"",publisher:""};
+  book:Book={id:0,author:"",release_date:new Date(),title:"",price:0,imgUrl:"",publisher:"",description:""};
   @Output() saveEvent:EventEmitter<Book> = new EventEmitter<Book>();
 
   saveBook():void
   {
     this.saveEvent.emit(this.book);
-    this.book = {id:0,author:"",release_date:new Date(),title:"",price:0,imgUrl:"",publisher:""};
+    this.book = {id:0,author:"",release_date:new Date(),title:"",price:0,imgUrl:"",publisher:"",description:""};
   }
 
 }

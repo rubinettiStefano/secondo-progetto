@@ -4,11 +4,12 @@ import {MatCardModule} from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-book',
   standalone: true,
-  imports: [MatCardModule,CommonModule,MatIconModule,MatButtonModule],
+  imports: [RouterLink,MatCardModule,CommonModule,MatIconModule,MatButtonModule],
   templateUrl: './book.component.html',
   styleUrl: './book.component.css'
 })
