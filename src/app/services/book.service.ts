@@ -150,6 +150,14 @@ export class BookService
     return this.books;
   }
 
+  getById(id:number):Book|null
+  {
+    let res =this.books.find(b=>b.id==id);
+    if(!res)
+        return null;
+
+    return res;
+  }
   getFiltered(criteria:string):Book[]
   {
     return this.getAll().filter(b=> (b.author+" "+b.title).includes(criteria));
