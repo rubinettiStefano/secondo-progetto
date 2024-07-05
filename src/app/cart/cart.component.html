@@ -1,0 +1,10 @@
+<h1>CARRELLO</h1>
+totale: {{getTotalPrice()}} &euro;
+@for (book of cartService.booksToBuy; track book.id) 
+{
+    <h4>{{book.title}}</h4>
+}
+@for (film of cartService.filmsToBuy; track film.id) 
+{
+    <h4>{{film.title}}</h4>
+}

@@ -10,11 +10,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatDatepicker, MatDatepickerModule } from '@angular/material/datepicker';
+import { provideNativeDateAdapter } from '@angular/material/core';
 
 @Component({
   selector: 'app-book-detail',
   standalone: true,
-  imports: [CommonModule,FormsModule,MatFormFieldModule, MatInputModule, MatSelectModule,MatIconModule,MatButtonModule,MatExpansionModule],
+  providers:[],
+  imports: [MatDatepickerModule,CommonModule,FormsModule,MatFormFieldModule, MatInputModule, MatSelectModule,MatIconModule,MatButtonModule,MatExpansionModule],
   templateUrl: './book-detail.component.html',
   styleUrl: './book-detail.component.css'
 })

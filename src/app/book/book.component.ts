@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-book',
@@ -15,10 +16,16 @@ import { RouterLink } from '@angular/router';
 })
 export class BookComponent 
 {
+  constructor(private cart:CartService){}
 
   @Input() content!:Book;
 
   @Output() deleteEvent:EventEmitter<number> = new EventEmitter<number>();
+
+  addToCart()
+  {
+    this.cart.addBookToCart(this.content);
+  }
 
   delete()
   {

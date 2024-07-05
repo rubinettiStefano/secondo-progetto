@@ -11,6 +11,9 @@
       <a mat-icon-button [routerLink]="['/books',content.id]" >
         <mat-icon>edit</mat-icon>
       </a>
+      <a mat-icon-button (click)="addToCart()" >
+        <mat-icon>add_shopping_cart</mat-icon>
+      </a>
     </mat-card-header>
     <mat-card-content>
       <p>Published By: {{content.publisher}}</p>
